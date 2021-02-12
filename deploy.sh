@@ -10,8 +10,8 @@ echo "Building..."
 
 mix deps.get
 mix compile
-(cd assets && npm install)
-(cd assets && npm run deploy)
+(cd assets && yarn install)
+(cd assets && yarn run deploy)
 mix phx.digest
 
 echo "Generating release..."
