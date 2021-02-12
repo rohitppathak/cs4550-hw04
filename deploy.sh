@@ -11,7 +11,7 @@ echo "Building..."
 mix deps.get
 mix compile
 (cd assets && npm install)
-(cd assets && webpack --mode production)
+(cd assets && npm run deploy)
 mix phx.digest
 
 echo "Generating release..."
