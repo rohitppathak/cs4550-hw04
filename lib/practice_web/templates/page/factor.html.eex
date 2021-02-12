@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="column">
+    <p><%= link "← go back", to: "/" %></p>
+    <h2>Factors of Number</h2>
+
+    <p>Factors of <%= @x %> are <%= @y %></p>
+  </div>
+</div>
+
