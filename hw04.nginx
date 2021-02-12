@@ -2,7 +2,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name rohitpathak.us www.rohitpathak.us;
+    server_name hw04.rohitpathak.us www.hw04.rohitpathak.us;
 
     location / {
         proxy_pass http://localhost:4790;
