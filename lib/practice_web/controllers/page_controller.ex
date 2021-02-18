@@ -6,7 +6,7 @@ defmodule PracticeWeb.PageController do
   end
 
   def double(conn, %{"x" => x}) do
-    {x, _} = Integer.parse(x)
+    {x, _} = Float.parse(x)
     y = Practice.double(x)
     render conn, "double.html", x: x, y: y
   end
@@ -18,7 +18,7 @@ defmodule PracticeWeb.PageController do
 
   def factor(conn, %{"x" => x}) do
     {x, _} = Integer.parse(x)
-    y = inspect(Practice.factor(x))
+    y = Enum.join(Enum.map(Practice.factor(x), fn(factor) -> Integer.to_string(factor) end), ",")
     render conn, "factor.html", x: x, y: y
   end
 
